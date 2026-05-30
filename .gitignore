@@ -1,0 +1,3 @@
+# Ignore local log files
+mega_access.log
+apache_access.log

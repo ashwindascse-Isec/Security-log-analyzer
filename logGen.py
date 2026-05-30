@@ -1,4 +1,5 @@
-192.168.1.10 - - [10/Oct/2020:13:50:01 +0530] "GET /home HTTP/1.1" 200 512 "-" "Mozilla/5.0"
+# Quick script to upscale your sample log text for stress testing
+sample_logs = """[192.168.1.10 - - [10/Oct/2020:13:50:01 +0530] "GET /home HTTP/1.1" 200 512 "-" "Mozilla/5.0"
 192.168.1.11 - - [10/Oct/2020:13:50:05 +0530] "GET /home HTTP/1.1" 200 512 "-" "Mozilla/5.0"
 192.168.1.12 - - [10/Oct/2020:13:50:10 +0530] "GET /contact HTTP/1.1" 200 256 "-" "Mozilla/5.0"
 
@@ -37,3 +38,8 @@
 
 192.168.1.10 - - [10/Oct/2020:13:59:00 +0530] "GET /home HTTP/1.1" 200 512 "-" "Mozilla/5.0"
 192.168.1.11 - - [10/Oct/2020:13:59:05 +0530] "GET /home HTTP/1.1" 200 512 "-" "Mozilla/5.0"
+]"""
+
+with open("mega_access.log", "w") as f:
+    for i in range(200):  # Multiplies the dataset sample scale quickly
+        f.write(sample_logs)
