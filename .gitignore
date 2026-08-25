@@ -1,3 +1,24 @@
 # Ignore local log files
 mega_access.log
 apache_access.log
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Generated DBMS flat files and runtime data
+data/*.db
+data/*.dat
+data/*.idx
+!data/.gitkeep
+
+# Alert outputs
+security_alerts.json
